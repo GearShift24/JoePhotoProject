@@ -34,7 +34,7 @@ public class IntArrayWorker
   }
   
   
-  
+  //finds the largest integer
   public int getLargest()
   {
 	  int largest = Integer.MIN_VALUE;
