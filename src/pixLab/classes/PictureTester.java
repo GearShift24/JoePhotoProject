@@ -27,6 +27,20 @@ public class PictureTester
 	    beach.explore();
 	  }
 	  
+	  public static void testMirrorDiagonalTopLeftToBottomRight()
+	  {
+		  Picture barbaraS = new Picture("seagull.jpg");
+		  barbaraS.mirrorDiagonalTopLeftToBottomRight();
+		  barbaraS.explore();
+	  }
+	  
+	  public static void testMirrorDiagonal()
+	  {
+	    Picture motorCycle = new Picture("blueMotorcycle.jpg");
+	    motorCycle.mirrorDiagonal();
+	    motorCycle.explore();
+	  }
+	  
 	  public static void testNegate()
 	  {
 		   Picture beach = new Picture("beach.jpg");
@@ -34,6 +48,8 @@ public class PictureTester
 		    beach.negate();
 		    beach.explore();
 	  }
+	  
+	  
 	  
 	  public static void testStatic()
 	  {
@@ -107,6 +123,24 @@ public class PictureTester
     swan.explore();
   }
   
+  
+  
+  
+  public static void testSeagull()
+  {
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.mirrorSeagull();
+	  seagull.explore();
+  }
+  
+  public static void testSnowman()
+  {
+	  Picture snowman = new Picture("snowman.jpg");
+	  snowman.mirrorSnowman();
+	  snowman.explore();
+  }
+  
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -115,11 +149,16 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 //    testZeroBlue();
-    testKeepOnlyBlue();
-    testNegate();
-    testStatic();
-    testFixUnderwater();
+	  testSnowman();
+	  testSeagull();
+//    testKeepOnlyBlue();
+//    testNegate();
+//    testStatic();
+//    testFixUnderwater();
+//	  testMirrorDiagonal();
+//	  testMirrorDiagonalTopLeftToBottomRight();
     //testKeepOnlyBlue();
+//	  testFlipSeagull(); 
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
