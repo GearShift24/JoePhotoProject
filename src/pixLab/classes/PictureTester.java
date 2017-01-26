@@ -84,9 +84,12 @@ public class PictureTester
 	  Picture koala = new Picture("barbaraS.jpg");
 	  koala.explore();
 	  koala.mirrorVerticalRightToLeft();
+	  koala.keepOnlyBlue();
+	  koala.mirrorDiagonalTopLeftToBottomRight();
+	  koala.mirrorHorizontalBottomToTop();
+	  koala.fixUnderwater();
 	  koala.explore();
-	  koala.zeroBlue();
-	  koala.explore();
+	
   }
   
   
@@ -123,7 +126,13 @@ public class PictureTester
     swan.explore();
   }
   
-  
+  public static void testEdgeDetection2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection2(10);
+    swan.explore();
+
+  }
   
   
   public static void testSeagull()
@@ -140,6 +149,12 @@ public class PictureTester
 	  snowman.explore();
   }
   
+  public static void testChosenCopy()
+  {
+	  Picture blueMotorcycle = new Picture ("blueMotorcycle.jpg");
+	  blueMotorcycle.chosenCopy(blueMotorcycle, 10, 200);
+	  blueMotorcycle.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -149,8 +164,8 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 //    testZeroBlue();
-	  testSnowman();
-	  testSeagull();
+//	  testSnowman();
+//	  testSeagull();
 //    testKeepOnlyBlue();
 //    testNegate();
 //    testStatic();
@@ -171,10 +186,11 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+//    testCollage();
+    testChosenCopy();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+//    testEdgeDetection();
+//    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);

@@ -402,14 +402,59 @@ public class Picture extends SimplePicture
       }
     }   
   }
+  
+  
+  
+  
+	  public void chosenCopy(Picture fromPic, 
+              int startRow, int startCol)
+{
+ Pixel fromPixel = null;
+ Pixel toPixel = null;
+ Pixel[][] toPixels = this.getPixels2D();
+ Pixel[][] fromPixels = fromPic.getPixels2D();
+ int endRow = 177;
+ int endCol = 500;
+
+ 
+ 
+ 
+ for (int fromRow = 100, toRow = startRow; fromRow < endRow; fromRow++, toRow++)
+	 
+ {
+	 for (int fromCol = 100, toCol = startCol; fromCol < endCol; fromCol++, toCol++)
+	 {
+		 fromPixel = fromPixels[fromRow][fromCol];
+	     toPixel = toPixels[toRow][toCol];
+	     toPixel.setColor(fromPixel.getColor());
+	 }
+ }
+}
+// for (int fromRow = 0, toRow = startRow; 
+//      fromRow < fromPixels.length &&
+//      toRow < toPixels.length; 
+//      fromRow++, toRow++)
+// {
+//   for (int fromCol = 0, toCol = startCol; 
+//        fromCol < fromPixels[0].length &&
+//        toCol < toPixels[0].length;  
+//        fromCol++, toCol++)
+   
+   
+   
+
+  
+  
+  
+  
 
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
-    Picture flower1 = new Picture("flower1.jpg");
-    Picture flower2 = new Picture("flower2.jpg");
+    Picture flower1 = new Picture("moon-surface.jpg");
+    Picture flower2 = new Picture("robot.jpg");
     this.copy(flower1,0,0);
-    this.copy(flower2,100,0);
+    this.copy(flower2,50,50);
     this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
@@ -419,6 +464,8 @@ public class Picture extends SimplePicture
     this.mirrorVertical();
     this.write("collage.jpg");
   }
+  
+  
   
   
   /** Method to show large changes in color 
@@ -448,6 +495,98 @@ public class Picture extends SimplePicture
   }
   
   
+  
+  public void fullRandom()
+  {
+	  Pixel [] [] currentPicture = this.getPixels2D();
+	  for(Pixel [] row : currentPicture)
+	  {
+		  for(Pixel currentPixel : row)
+		  {
+			 int red = (int)(Math.random() * 256);
+			 int green = (int)(Math.random() * 256);
+			 int blue = (int)(Math.random() * 256);
+			 
+			 currentPixel.setColor(new Color( red,green,blue));
+			 
+			 
+			 
+		  }
+	  }
+  }
+  
+  
+  public void fullRandomRed()
+  {
+	  Pixel [] [] currentPicture = this.getPixels2D();
+	  for(Pixel [] row : currentPicture)
+	  {
+		  for(Pixel currentPixel : row)
+		  {
+			 int red = (int)(Math.random() * 256);
+			 
+			 currentPixel.setColor(new Color( red));
+			 
+			 
+			 
+		  }
+	  }
+  }
+  
+ 
+  public void edgeDetection2(int edgeDist)
+  {
+
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    Pixel topPixel = null;
+	    Pixel bottomPixel = null;
+	    
+	    Pixel[][] pixels = this.getPixels2D();
+	    Color rightColor = null;
+	    Color bottomColor = null;
+	    
+//	    
+//	    for (int row = 0; row < pixels.length; row++)
+//	    {
+//	      for (int col = 0; 
+//	           col < pixels[0].length-1; col++)
+//	      {
+//	        leftPixel = pixels[row][col];
+//	        rightPixel = pixels[row][col+1];
+//	        rightColor = rightPixel.getColor();
+//	        if (leftPixel.colorDistance(rightColor) > 
+//	            edgeDist)
+//	          leftPixel.setColor(Color.BLACK);
+//	        else
+//	          leftPixel.setColor(Color.WHITE);
+//	      }
+//	    }
+	  
+	    for(int col = 0; col < pixels[0].length-1; col++)
+	    {
+	    	  for (int row = pixels.length-1; row > 0; row--)
+	   	      {
+	    	    topPixel = pixels[row][col];
+		        bottomPixel = pixels[row-1][col];
+		        bottomColor = bottomPixel.getColor();
+		        if (topPixel.colorDistance(bottomColor) > 
+		            edgeDist)
+		          topPixel.setColor(Color.BLACK);
+		        else
+		          topPixel.setColor(Color.WHITE);
+	    }
+	    }
+	    
+//	    
+
+	  
+  }
+  
+  		
+  
+  
+  		
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
