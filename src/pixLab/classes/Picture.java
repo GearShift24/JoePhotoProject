@@ -442,7 +442,33 @@ public class Picture extends SimplePicture
    
    
    
+	  public void glitch(Picture fromPic, 
+              int startRow, int startCol)
+{
+		  
+		  
+ Pixel fromPixel = null;
+ Pixel toPixel = null;
+ Pixel[][] toPixels = this.getPixels2D();
+ Pixel[][] fromPixels = fromPic.getPixels2D();
+ int endRow = 107;
+ int endCol = 250;
 
+ 
+ for (int fromRow = 100, toRow = startRow; fromRow < endRow; fromRow++, toRow++)
+	 
+ {
+	 for (int fromCol = 100, toCol = startCol; fromCol < endCol; fromCol++, toCol++)
+	 {
+		 fromPixel = fromPixels[fromRow][fromCol];
+	     toPixel = toPixels[toRow][toCol];
+	     toPixel.setColor(fromPixel.getColor());
+	     int green = (int)(Math.random() * 256);
+	     toPixel.setColor(new Color(Pixel.getRed(toCol),green,Pixel.getBlue(toCol)));	     
+	 }
+ }
+ 
+}
   
   
   
@@ -537,31 +563,14 @@ public class Picture extends SimplePicture
   public void edgeDetection2(int edgeDist)
   {
 
-	    Pixel leftPixel = null;
-	    Pixel rightPixel = null;
+
 	    Pixel topPixel = null;
 	    Pixel bottomPixel = null;
 	    
 	    Pixel[][] pixels = this.getPixels2D();
-	    Color rightColor = null;
+
 	    Color bottomColor = null;
 	    
-//	    
-//	    for (int row = 0; row < pixels.length; row++)
-//	    {
-//	      for (int col = 0; 
-//	           col < pixels[0].length-1; col++)
-//	      {
-//	        leftPixel = pixels[row][col];
-//	        rightPixel = pixels[row][col+1];
-//	        rightColor = rightPixel.getColor();
-//	        if (leftPixel.colorDistance(rightColor) > 
-//	            edgeDist)
-//	          leftPixel.setColor(Color.BLACK);
-//	        else
-//	          leftPixel.setColor(Color.WHITE);
-//	      }
-//	    }
 	  
 	    for(int col = 0; col < pixels[0].length-1; col++)
 	    {

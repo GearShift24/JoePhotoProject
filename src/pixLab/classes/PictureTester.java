@@ -156,6 +156,78 @@ public class PictureTester
 	  blueMotorcycle.explore();
   }
   
+  public static void testGlitch()
+  {
+	  Picture cycle = new Picture ("blueMotorcycle.jpg");
+	  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  
+	  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));  cycle.glitch(cycle, (int)(Math.random() * 470), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  cycle.glitch(cycle, (int)(Math.random() * 460), (int)(Math.random() * 450));
+	  
+	   cycle.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -186,8 +258,9 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
+	  testGlitch();
 //    testCollage();
-    testChosenCopy();
+//    testChosenCopy();
     //testCopy();
 //    testEdgeDetection();
 //    testEdgeDetection2();
