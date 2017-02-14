@@ -228,6 +228,19 @@ public class PictureTester
 	  
 	   cycle.explore();
   }
+  
+  
+   
+  public static void testValentines()
+  {
+	  Picture me = new Picture("han.jpeg");
+	  me.valentines();
+	  me.explore();
+  }
+  
+  
+  
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -235,6 +248,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	  testValentines();
 //    testZeroBlue();
 //	  testSnowman();
 //	  testSeagull();
@@ -258,7 +272,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-	  testGlitch();
+//	  testGlitch();
 //    testCollage();
 //    testChosenCopy();
     //testCopy();

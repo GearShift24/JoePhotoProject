@@ -86,9 +86,49 @@ public class Picture extends SimplePicture
     
   }
   
+  
+  
+  
+  public void valentines()
+  {
+	  Picture computer = new Picture("derp.png");
+	    this.copy(computer,50,100);
+	  
+	  
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(0);
+        pixelObj.setGreen(0);
+      }
+    }
+    
+    addMessage("I spend my valentines day like I write my code",20,350);
+    addMessage("...solo... and failing to understand why", 70,390);
+    write("hanMeme.jpg");
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   /** Method to set the blue to 0 */
   public void zeroBlue()
   {
+	  
+	  
+	  
+	  
     Pixel[][] pixels = this.getPixels2D();
     for (Pixel[] rowArray : pixels)
     {
