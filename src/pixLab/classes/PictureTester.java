@@ -248,7 +248,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	  testValentines();
+//	  testValentines();
 //    testZeroBlue();
 //	  testSnowman();
 //	  testSeagull();
@@ -272,7 +272,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-//	  testGlitch();
+	  testGlitch();
 //    testCollage();
 //    testChosenCopy();
     //testCopy();
