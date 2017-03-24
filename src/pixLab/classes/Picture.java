@@ -632,9 +632,82 @@ public class Picture extends SimplePicture
 	  
   }
   
-  		
   
   
+  public void Stegano()
+  {
+
+
+	  Picture pic2 = new Picture("space.jpg");
+	  
+	  Pixel[][] pixelArray = this.getPixels2D();
+	  Pixel[][] pixelArray2 = pic2.getPixels2D();
+	  
+	  int green = 220;
+	  
+	  for(int row = 0; row < pixelArray.length-1; row++)
+	  {
+		  for(int col = 0; col < pixelArray[0].length-1;col++)
+		  {
+			  	if(pixelArray[row][col].getGreen() == green )
+			  		{
+			  			pixelArray[row][col].setColor(pixelArray2[row][col].getColor());
+			  		}
+		  }
+	  }
+		 
+	  
+	  
+  }
+  	
+  public void Chroma()
+  {
+ Picture messagePic = new Picture("message.jpg");
+	  
+	  Pixel[][] pixelArray = this.getPixels2D();
+	  Pixel[][] messageArray = messagePic.getPixels2D();
+	  
+	  int black = 0;
+	  
+	  for(int row = 0; row < pixelArray.length-1; row++)
+	  {
+		  for(int col = 0; col < pixelArray[0].length-1;col++)
+		  {
+			  if(messageArray[row][col].getBlue() == black && messageArray[row][col].getRed() == black && messageArray[row][col].getGreen() == black )
+			  {
+				  pixelArray[row][col].setRed(pixelArray[row][col].getRed()-1);
+				  
+				  
+				  this.write("decodeMe.jpg");
+			  }
+		  }
+	  }
+  }
+  
+  public void Decode()
+  {
+	  Picture decodePic = new Picture("decodeMe.jpg");
+	  
+	  Picture empty = new Picture("empty.jpg");
+	  
+	  Pixel[][] decodeArray = decodePic.getPixels2D();
+	  
+	  Pixel[][] emptyArray = empty.getPixels2D();
+	  
+	  for(int row = 0; row < decodeArray.length-1; row++)
+	  {
+		  for(int col = 0; col < decodeArray[0].length-1;col++)
+		  {
+			  if(decodeArray[row][col].getRed() %2 == 0)
+			  {
+				
+				  emptyArray[row][col].setColor(Color.black);
+				  
+			  }
+		  }
+	  }
+	  
+  }
   		
   /* Main method for testing - each class in Java can have a main 
    * method 

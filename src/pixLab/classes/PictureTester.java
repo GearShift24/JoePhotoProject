@@ -18,7 +18,6 @@ public class PictureTester
     beach.explore();
   }
   
-  
 	  public static void testKeepOnlyBlue()
 	  {
 	    Picture beach = new Picture("beach.jpg");
@@ -230,6 +229,14 @@ public class PictureTester
   }
   
   
+  public static void testStegano()
+  {
+	  Picture yo = new Picture("greenMan.jpg");
+	  yo.Stegano();
+	  yo.explore();
+  }
+  
+  
    
   public static void testValentines()
   {
@@ -238,7 +245,19 @@ public class PictureTester
 	  me.explore();
   }
   
+  public static void testChroma()
+  {
+	  Picture kek = new Picture("wall.jpg");
+	  kek.Chroma();
+	  kek.explore();
+  }
   
+  public static void testDecode()
+  {
+	  Picture decode = new Picture();
+	  decode.Decode();
+	  decode.explore();
+  }
   
   
   /** Main method for testing.  Every class can have a main
@@ -248,6 +267,9 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	  testStegano();
+	  testChroma();
+	  testDecode();
 //	  testValentines();
 //    testZeroBlue();
 //	  testSnowman();
@@ -272,7 +294,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-	  testGlitch();
+//	  testGlitch();
 //    testCollage();
 //    testChosenCopy();
     //testCopy();
