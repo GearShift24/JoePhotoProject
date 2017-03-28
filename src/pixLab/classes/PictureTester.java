@@ -251,7 +251,8 @@ public class PictureTester
 	  Picture message = new Picture("message.jpg");
 	  kek.Chroma(message);
 	  kek.explore();
-	  message.Decode();
+	  message.explore();
+	  kek.Decode();
 	  
   }
   

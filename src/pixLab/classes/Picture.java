@@ -680,7 +680,7 @@ public class Picture extends SimplePicture
 			  currentPixel = pixelArray[row][col];
 			  
 			  
-			  if(hiddenPixel.getColor() == Color.BLACK)
+			  if(hiddenPixel.getRed() == 255 && hiddenPixel.getBlue() == 255 &&hiddenPixel.getGreen() == 255 )
 			  {
 				  int currentRed = currentPixel.getRed();
 				  if(currentRed % 2 == 0)
