@@ -660,53 +660,93 @@ public class Picture extends SimplePicture
 	  
   }
   	
-  public void Chroma()
+  public void Chroma(Picture hiddenPicture)
   {
- Picture messagePic = new Picture("message.jpg");
+ 
 	  
 	  Pixel[][] pixelArray = this.getPixels2D();
-	  Pixel[][] messageArray = messagePic.getPixels2D();
+	  Pixel[][] hiddenData = hiddenPicture.getPixels2D();
 	  
-	  int black = 0;
+	  Pixel hiddenPixel = null;
+	  Pixel currentPixel = null;
+	 
 	  
 	  for(int row = 0; row < pixelArray.length-1; row++)
 	  {
 		  for(int col = 0; col < pixelArray[0].length-1;col++)
 		  {
-			  if(messageArray[row][col].getBlue() == black && messageArray[row][col].getRed() == black && messageArray[row][col].getGreen() == black )
+			  
+			  hiddenPixel = hiddenData[row][col];
+			  currentPixel = pixelArray[row][col];
+			  
+			  
+			  if(hiddenPixel.getColor() == Color.BLACK)
 			  {
-				  pixelArray[row][col].setRed(pixelArray[row][col].getRed()-1);
-				  
-				  
-				  this.write("decodeMe.jpg");
+				  int currentRed = currentPixel.getRed();
+				  if(currentRed % 2 == 0)
+				  {
+					  currentPixel.setRed(currentPixel.getRed()+1);
+				  }
 			  }
+				  else
+				  {
+					  int currentRed = currentPixel.getRed();
+					  if(currentRed % 2 != 0)
+					  {
+						  currentPixel.setRed(currentPixel.getRed()-1);
+					  }
+				  }
 		  }
+		}
+	  this.write("encrypted.png");
+	  this.explore();
 	  }
-  }
   
   public void Decode()
   {
-	  Picture decodePic = new Picture("decodeMe.jpg");
-	  
-	  Picture empty = new Picture("empty.jpg");
-	  
-	  Pixel[][] decodeArray = decodePic.getPixels2D();
-	  
-	  Pixel[][] emptyArray = empty.getPixels2D();
-	  
-	  for(int row = 0; row < decodeArray.length-1; row++)
-	  {
-		  for(int col = 0; col < decodeArray[0].length-1;col++)
-		  {
-			  if(decodeArray[row][col].getRed() %2 == 0)
-			  {
+	
+	  Pixel [][] decoded = this.getPixels2D();
+		Pixel currentPixel = null;
+		
+		for(int row = 0; row < decoded.length; row++)
+		{
+			for(int col = 0; col < decoded[0].length; col++)
+			{
+				currentPixel = decoded[row][col];
+				int currentRed = currentPixel.getRed();
+				if(currentRed %2 == 0)
+				{
+					currentPixel.setColor(new Color(179, 255, 40));
+				}
 				
-				  emptyArray[row][col].setColor(Color.black);
-				  
-			  }
-		  }
-	  }
+			}
+		}
+	  this.explore();
+	  this.write("ayyWeGoood.png");
 	  
+//	  Picture empty = new Picture("encrypted.jpg");
+//	  
+//	  Pixel[][] decodeArray = this.getPixels2D();
+//	  
+//	  Pixel[][] emptyArray = empty.getPixels2D();
+//	  
+//	  for(int row = 0; row < decodeArray.length-1; row++)
+//	  {
+//		  for(int col = 0; col < decodeArray[0].length-1;col++)
+//		  {
+//			  if(decodeArray[row][col].getRed() %2 == 0)
+//			  {
+//				
+//				  emptyArray[row][col].setColor(Color.black);
+//				  
+//				  this.write("decodedMESSAGE!");
+//				  this.explore();
+//				  
+//				
+//			  }
+//		  }
+//	  }
+//	  this.explore();
   }
   		
   /* Main method for testing - each class in Java can have a main 

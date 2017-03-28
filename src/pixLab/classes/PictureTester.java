@@ -248,15 +248,11 @@ public class PictureTester
   public static void testChroma()
   {
 	  Picture kek = new Picture("wall.jpg");
-	  kek.Chroma();
+	  Picture message = new Picture("message.jpg");
+	  kek.Chroma(message);
 	  kek.explore();
-  }
-  
-  public static void testDecode()
-  {
-	  Picture decode = new Picture();
-	  decode.Decode();
-	  decode.explore();
+	  message.Decode();
+	  
   }
   
   
@@ -269,7 +265,7 @@ public class PictureTester
     // to run
 	  testStegano();
 	  testChroma();
-	  testDecode();
+
 //	  testValentines();
 //    testZeroBlue();
 //	  testSnowman();
